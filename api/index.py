@@ -20,3 +20,29 @@ os.environ.setdefault("STORAGE_PROVIDER", "vercel_blob")
 
 from app.main import app  # noqa: E402  (Vercel ASGI entrypoint)
 
+# TEMP diagnostic: surface blob write error details (remove before final).
+import traceback  # noqa: E402
+
+from app.services import storage  # noqa: E402
+
+
+@app.get("/api/__blobtest__")  # noqa: E402
+async def _blobtest():
+    info = {"provider": storage._provider()}
+    try:
+        import vercel_blob
+        info["sdk_version"] = getattr(vercel_blob, "__version__", "?")
+    except Exception as exc:
+        info["sdk_import_error"] = str(exc)
+    info["token_in_env"] = bool(os.environ.get("BLOB_READ_WRITE_TOKEN"))
+    info["store_id_in_env"] = os.environ.get("BLOB_STORE_ID")
+    try:
+        key = storage._blob_put("uploads/__test_probe.txt", b"hello from probe")
+        info["put_ok"] = True
+        info["key"] = key
+    except Exception as exc:
+        info["put_ok"] = False
+        info["put_error"] = str(exc)
+        info["traceback"] = traceback.format_exc()[-2000:]
+    return info
+
