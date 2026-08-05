@@ -19,7 +19,12 @@ UPLOAD_DIR = DATA_DIR / "uploads"
 MODEL_DIR = DATA_DIR / "models"
 REPORT_DIR = DATA_DIR / "reports"
 for _d in (UPLOAD_DIR, MODEL_DIR, REPORT_DIR):
-    _d.mkdir(parents=True, exist_ok=True)
+    try:
+        _d.mkdir(parents=True, exist_ok=True)
+    except OSError:
+        # Read-only filesystems (e.g. Vercel serverless) may reject mkdir;
+        # the storage provider handles writes when actually needed.
+        pass
 
 
 class Settings:
