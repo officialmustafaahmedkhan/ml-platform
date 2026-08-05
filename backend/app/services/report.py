@@ -62,7 +62,7 @@ def _rebuild_eval(db, m: ModelArtifact) -> dict:
     if ds is None:
         return out
     try:
-        df = pd.read_csv(ds.filepath)
+        df = storage.read_csv(ds.filepath)
     except Exception:  # noqa: BLE001
         return out
 

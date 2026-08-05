@@ -9,12 +9,13 @@ from __future__ import annotations
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
 
-from ..config import BASE_DIR, settings
+from ..config import settings
 from ..database import get_db
 from ..models import Dataset, User
 from ..schemas import LLMLabelRequest, LLMLabelResponse, LLMStatus
 from ..services import llm as llm_svc
 from ..services import preprocessing as pp
+from ..services import storage
 from ..services.pipeline import load_dataset_df
 from ..utils.serialization import dumps, loads
 from ..utils.security import get_current_user
@@ -68,8 +69,10 @@ def llm_label(
 
     import pandas as pd
 
-    path = BASE_DIR / "data" / "uploads" / f"{ds.name.rsplit('.', 1)[0]}_llm_{column.lower()}.csv"
-    out.to_csv(path, index=False)
+    path = storage.save_upload(
+        f"{ds.name.rsplit('.', 1)[0]}_llm_{column.lower()}.csv",
+        out.to_csv(index=False).encode("utf-8"),
+    )
 
     counts = out[column].value_counts(dropna=False).astype(int).to_dict()
     counts = {str(k): int(v) for k, v in counts.items()}

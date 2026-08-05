@@ -98,7 +98,7 @@ def dataset_head(dataset_id: int, n: int = 20, user: User = Depends(get_current_
     ds = db.query(Dataset).filter(Dataset.id == dataset_id, Dataset.user_id == user.id).first()
     if ds is None:
         raise HTTPException(status_code=404, detail="Dataset not found")
-    df = pd.read_csv(ds.filepath)
+    df = storage.read_csv(ds.filepath)
     return {"columns": list(df.columns), "preview": df.head(n).fillna("").astype(str).to_dict(orient="records")}
 
 
@@ -108,7 +108,7 @@ def dataset_eda(dataset_id: int, user: User = Depends(get_current_user), db: Ses
     if ds is None:
         raise HTTPException(status_code=404, detail="Dataset not found")
     try:
-        df = pd.read_csv(ds.filepath)
+        df = storage.read_csv(ds.filepath)
     except Exception as exc:
         raise HTTPException(status_code=400, detail=f"Could not read dataset: {exc}")
     profile = json.loads(ds.profile) if ds.profile else {}

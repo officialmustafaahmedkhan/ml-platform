@@ -13,7 +13,7 @@ import pandas as pd
 from sqlalchemy import func
 from sqlalchemy.orm import Session
 
-from ..config import BASE_DIR, settings
+from ..config import settings
 from ..models import Dataset, ModelArtifact, User
 from ..schemas import LLMLabelRequest, TrainRequest
 from ..services import eda as eda_svc
@@ -460,8 +460,10 @@ def _exec_llm_label(parsed: dict, db: Session, user: User) -> dict:
     for c in (column,):
         out[c] = out[c].astype(object)
 
-    path = BASE_DIR / "data" / "uploads" / f"{ds.name.rsplit('.', 1)[0]}_llm_{column.lower()}.csv"
-    out.to_csv(path, index=False)
+    path = storage.save_upload(
+        f"{ds.name.rsplit('.', 1)[0]}_llm_{column.lower()}.csv",
+        out.to_csv(index=False).encode("utf-8"),
+    )
 
     counts = out[column].value_counts(dropna=False).astype(int).to_dict()
     counts = {str(k): int(v) for k, v in counts.items()}

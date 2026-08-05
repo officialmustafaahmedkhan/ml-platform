@@ -7,9 +7,9 @@ from fastapi import APIRouter, Depends, HTTPException
 from fastapi.responses import FileResponse, Response
 from sqlalchemy.orm import Session
 
-from ..config import REPORT_DIR
 from ..database import get_db
 from ..models import ModelArtifact, User
+from ..services import storage
 from ..utils.security import get_current_user
 
 router = APIRouter(prefix="/api/export", tags=["export"])
@@ -21,7 +21,7 @@ def export_model(model_id: int, user: User = Depends(get_current_user), db: Sess
     if m is None:
         raise HTTPException(status_code=404, detail="Model not found")
     return FileResponse(
-        m.filepath,
+        storage.to_local_path(m.filepath),
         media_type="application/octet-stream",
         filename=f"{m.model_type}_model_{m.id}.pkl",
     )
@@ -83,7 +83,17 @@ def export_report_pdf(model_id: int, user: User = Depends(get_current_user), db:
 @router.get("/batch/{filename}")
 def download_batch(filename: str, user: User = Depends(get_current_user)):
     """Download a previously generated batch-prediction CSV report."""
-    path = REPORT_DIR / filename
-    if not path.exists():
+    from pathlib import Path
+
+    # Guard against path traversal: only allow the stored basename.
+    safe = Path(filename).name
+    key = f"reports/{safe}"
+    try:
+        path = storage.to_local_path(key)
+        if not path.exists():
+            raise HTTPException(status_code=404, detail="Report not found")
+    except HTTPException:
+        raise
+    except Exception:  # noqa: BLE001 - blob fetch failures surface as 404
         raise HTTPException(status_code=404, detail="Report not found")
-    return FileResponse(path, media_type="text/csv", filename=filename)
+    return FileResponse(path, media_type="text/csv", filename=safe)

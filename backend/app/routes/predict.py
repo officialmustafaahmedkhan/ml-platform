@@ -122,13 +122,15 @@ def predict_batch(file: UploadFile = File(...), model_id: int = 0,
     path = storage.save_csv_report(out_df)
     results = out_df.head(100).to_dict(orient="records")
 
+    output_filename = str(path).rsplit("/", 1)[-1]
+
     log_experiment(db, user, "batch_predict", dataset_id=m.dataset_id, model_id=m.id,
-                   details={"rows": int(len(out_df)), "output": str(path.name)})
+                   details={"rows": int(len(out_df)), "output": output_filename})
     db.commit()
 
     return BatchPredictResponse(
         model_id=m.id,
         total=int(len(out_df)),
         results=results,
-        output_filename=path.name,
+        output_filename=output_filename,
     )

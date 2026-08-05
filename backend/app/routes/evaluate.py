@@ -32,7 +32,7 @@ def _performance_charts(db: Session, m: ModelArtifact, model, class_names: list[
     ds = db.query(Dataset).filter(Dataset.id == m.dataset_id).first()
     if ds is None:
         return {}
-    df = pd.read_csv(ds.filepath)
+    df = storage.read_csv(ds.filepath)
 
     pipeline_meta = json.loads(m.pipeline) if m.pipeline else {}
     pipeline = storage.load_pipeline(pipeline_meta.get("path"))

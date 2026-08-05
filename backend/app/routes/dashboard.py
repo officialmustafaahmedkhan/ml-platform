@@ -3,7 +3,6 @@ from __future__ import annotations
 
 import json
 
-import pandas as pd
 from fastapi import APIRouter, Depends
 from sqlalchemy.orm import Session
 
@@ -13,6 +12,7 @@ from ..schemas import DashboardResponse, UserOut
 from ..services import evaluation as ev
 from ..services import recommendation as rec
 from ..services import preprocessing as pp
+from ..services import storage
 from ..utils.serialization import to_jsonable
 from ..utils.security import get_current_user
 
@@ -59,7 +59,7 @@ def dashboard(user: User = Depends(get_current_user), db: Session = Depends(get_
     suggestions = []
     if datasets:
         latest = datasets[0]
-        df = pd.read_csv(latest.filepath)
+        df = storage.read_csv(latest.filepath)
         profile = pp.profile_dataset(df)
         for s in rec.recommend_preprocessing(profile):
             suggestions.append(s)

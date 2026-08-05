@@ -9,13 +9,14 @@ from sqlalchemy.orm import Session
 from ..models import Dataset
 from ..utils.serialization import loads
 from . import preprocessing as pp
+from . import storage
 
 
 def load_dataset_df(db: Session, dataset_id: int, user_id: int) -> tuple[Dataset, pd.DataFrame]:
     ds = db.query(Dataset).filter(Dataset.id == dataset_id, Dataset.user_id == user_id).first()
     if ds is None:
         raise ValueError("Dataset not found or not owned by user")
-    df = pd.read_csv(ds.filepath)
+    df = storage.read_csv(ds.filepath)
     return ds, df
 
 

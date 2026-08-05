@@ -63,6 +63,12 @@ class Settings:
     DEFAULT_TEST_SIZE: float = float(os.getenv("DEFAULT_TEST_SIZE", "0.2"))
     DEFAULT_RANDOM_STATE: int = int(os.getenv("DEFAULT_RANDOM_STATE", "42"))
 
+    # Object storage provider: "local" (filesystem, dev) or "vercel_blob".
+    # Keys persisted in the DB are relative (uploads/x.csv, models/x.pkl,
+    # reports/x.csv) so they are portable across providers.
+    STORAGE_PROVIDER: str = os.getenv("STORAGE_PROVIDER", "local")
+    BLOB_READ_WRITE_TOKEN: str = os.getenv("BLOB_READ_WRITE_TOKEN", "")
+
     # LLM labeling (Outcome column generation)
     # LLM_PROVIDER: "off" | "openai" | "ollama"
     LLM_PROVIDER: str = os.getenv("LLM_PROVIDER", "off")

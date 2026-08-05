@@ -8,13 +8,40 @@ from sqlalchemy.orm import declarative_base, sessionmaker
 
 from .config import settings
 
-_IS_SQLITE = settings.DATABASE_URL.startswith("sqlite")
+
+def _normalize_url(url: str) -> str:
+    """Map plain ``postgresql://`` URLs onto the psycopg3 driver.
+
+    Serverless hosts (Vercel, Neon, ...) hand out ``postgresql://`` URLs;
+    SQLAlchemy needs an explicit driver, so we default to ``+psycopg``.
+    """
+    if url.startswith("sqlite"):
+        return url
+    scheme, _, rest = url.partition("://")
+    if scheme in ("postgres", "postgresql"):
+        return f"postgresql+psycopg://{rest}"
+    return url
+
+
+_DATABASE_URL = _normalize_url(settings.DATABASE_URL)
+_IS_SQLITE = _DATABASE_URL.startswith("sqlite")
 
 # SQLite is single-writer: give it a busy timeout so concurrent writers wait
 # instead of failing with "database is locked" (default timeout is 0ms).
-connect_args = {"check_same_thread": False, "timeout": 30} if _IS_SQLITE else {}
+if _IS_SQLITE:
+    connect_args = {"check_same_thread": False, "timeout": 30}
+    engine_kwargs = {}
+else:
+    # Serverless/stateless engines must not hold pooled connections across
+    # invocations; open a fresh connection per call and ping before use.
+    from sqlalchemy.pool import NullPool
 
-engine = create_engine(settings.DATABASE_URL, connect_args=connect_args, future=True)
+    connect_args = {"connect_timeout": 10}
+    engine_kwargs = {"poolclass": NullPool, "pool_pre_ping": True}
+
+engine = create_engine(
+    _DATABASE_URL, connect_args=connect_args, future=True, **engine_kwargs
+)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine, future=True)
 
 

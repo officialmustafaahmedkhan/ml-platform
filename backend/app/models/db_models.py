@@ -33,7 +33,8 @@ from ..database import Base
 
 
 def _utcnow() -> datetime:
-    return datetime.now(timezone.utc)
+    """Naive-UTC timestamp (portable across SQLite and Postgres)."""
+    return datetime.now(timezone.utc).replace(tzinfo=None)
 
 
 class User(Base):
