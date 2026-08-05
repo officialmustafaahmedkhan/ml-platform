@@ -24,10 +24,11 @@ from app.main import app  # noqa: E402  (Vercel ASGI entrypoint)
 import traceback  # noqa: E402
 
 from app.services import storage  # noqa: E402
+from starlette.routing import Route  # noqa: E402
 
 
-@app.get("/api/__blobtest__")  # noqa: E402
-async def _blobtest():
+# Register before app.main's StaticFiles mount ("/") so it is reachable.
+async def _blobtest(request):  # noqa: E402
     info = {"provider": storage._provider()}
     try:
         import vercel_blob
@@ -45,4 +46,7 @@ async def _blobtest():
         info["put_error"] = str(exc)
         info["traceback"] = traceback.format_exc()[-2000:]
     return info
+
+
+app.routes.insert(0, Route("/api/__blobtest__", _blobtest, methods=["GET"]))
 
