@@ -1,0 +1,5 @@
+INFO:     127.0.0.1:56291 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49962 - "POST /api/auth/register HTTP/1.1" 201 Created
+INFO:     127.0.0.1:57026 - "POST /api/auth/verify-otp HTTP/1.1" 422 Unprocessable Content
+INFO:     127.0.0.1:57027 - "POST /api/auth/login HTTP/1.1" 403 Forbidden
+INFO:     127.0.0.1:54627 - "POST /api/auth/register HTTP/1.1" 422 Unprocessable Content

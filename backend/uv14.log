@@ -1,0 +1,17 @@
+INFO:     127.0.0.1:56904 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56905 - "POST /api/auth/register HTTP/1.1" 201 Created
+INFO:     127.0.0.1:56906 - "POST /api/auth/verify-otp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56907 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56908 - "POST /api/datasets/upload HTTP/1.1" 201 Created
+INFO:     127.0.0.1:56909 - "POST /api/train HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56910 - "GET /api/pipeline/models HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56911 - "GET /api/pipeline/131 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50243 - "POST /api/auth/register HTTP/1.1" 201 Created
+INFO:     127.0.0.1:50244 - "POST /api/auth/verify-otp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50245 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50246 - "POST /api/datasets/upload HTTP/1.1" 201 Created
+INFO:     127.0.0.1:50247 - "POST /api/train HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50248 - "GET /api/pipeline/models HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50249 - "GET /api/pipeline/132 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54250 - "GET /api/dashboard HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54252 - "GET /api/dashboard HTTP/1.1" 200 OK

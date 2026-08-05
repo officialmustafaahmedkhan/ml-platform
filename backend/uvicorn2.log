@@ -1,0 +1,7 @@
+INFO:     127.0.0.1:58022 - "POST /api/auth/register HTTP/1.1" 201 Created
+INFO:     127.0.0.1:58027 - "POST /api/auth/register HTTP/1.1" 201 Created
+INFO:     127.0.0.1:58031 - "POST /api/auth/verify-otp HTTP/1.1" 422 Unprocessable Content
+INFO:     127.0.0.1:58034 - "GET /api/auth/me HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:49210 - "POST /api/auth/register HTTP/1.1" 201 Created
+INFO:     127.0.0.1:49213 - "POST /api/auth/register HTTP/1.1" 201 Created
+INFO:     127.0.0.1:62576 - "GET /api/health HTTP/1.1" 200 OK

@@ -1,0 +1,241 @@
+age,income,credit_score,loan_amount,employment_years,gender,education,loan_approved
+61,44543,509,26975,17,,Master,No
+29,57402,,27090,18,,Bachelor,No
+22,,823,40022,19,Female,Bachelor,Yes
+51,33737,767,42588,15,Male,High School,No
+38,74826,544,15529,7,Male,Bachelor,No
+42,78809,,31133,24,Female,High School,Yes
+24,68136,477,11597,29,,Master,Yes
+38,82607,831,9928,3,Female,Master,No
+51,47916,809,33237,9,Female,Bachelor,Yes
+37,43007,422,5072,15,Male,Bachelor,No
+60,80858,471,27378,12,Female,Master,No
+58,73847,795,29399,25,Male,Bachelor,No
+54,,459,37058,28,Male,High School,No
+63,62670,529,8894,20,Female,Bachelor,No
+54,93718,754,30331,11,Male,Bachelor,No
+29,51794,,23244,4,Male,Bachelor,No
+61,34673,773,45805,22,Male,Bachelor,Yes
+51,13184,678,14601,25,Female,High School,Yes
+25,,,9460,28,,PhD,Yes
+35,76007,365,32003,,Female,High School,No
+28,,436,13019,18,Male,High School,No
+66,,612,6880,2,Male,High School,No
+55,104345,829,37741,28,Male,Bachelor,No
+64,76630,586,31025,,Male,PhD,No
+34,97402,414,2000,23,Female,Bachelor,No
+50,36186,374,12106,23,Female,Bachelor,No
+49,12000,443,9487,,Male,Master,No
+56,91360,567,34021,25,Female,PhD,No
+26,26827,570,45616,1,Male,Bachelor,No
+45,60000,502,53814,26,Female,Master,No
+51,62776,660,34886,10,,PhD,No
+59,37124,474,9656,22,Female,High School,Yes
+51,92158,477,9162,3,Female,Bachelor,No
+42,92085,815,11662,26,Female,Bachelor,No
+42,70132,617,31852,4,Female,Bachelor,No
+36,57351,649,42716,27,Female,Bachelor,Yes
+28,62212,636,2000,8,Female,High School,No
+34,33890,427,33529,16,Female,Master,No
+27,52741,,37990,20,,Master,No
+31,55691,728,29424,18,Male,High School,No
+61,39251,371,70307,16,Male,Master,No
+45,76683,,32493,,Female,Bachelor,No
+25,26617,489,25455,18,Male,Bachelor,No
+41,48025,649,33547,15,Female,Bachelor,Yes
+33,12000,803,17382,2,Male,Bachelor,No
+52,68930,,9610,7,,Master,No
+60,74337,382,30911,13,Male,Bachelor,No
+21,71668,,41151,28,Male,Bachelor,No
+42,122198,,21711,15,Female,Bachelor,No
+42,78675,690,37960,1,Male,PhD,No
+67,37276,420,19739,6,Male,Bachelor,No
+38,116598,491,47839,17,Male,High School,Yes
+28,37753,544,28007,4,Male,High School,Yes
+30,75352,765,32480,27,Female,Bachelor,No
+43,74349,625,35726,6,Female,High School,No
+48,38646,659,6071,22,Female,Bachelor,No
+36,88698,702,22450,22,,Bachelor,No
+41,65801,652,50767,18,,High School,No
+52,70561,791,25511,17,Female,High School,No
+35,43134,459,44636,14,Female,High School,No
+66,86658,668,37377,,Female,High School,Yes
+30,39059,,2000,8,,PhD,No
+64,18858,628,34903,13,Male,Bachelor,No
+62,89353,547,9764,16,Male,PhD,No
+65,48612,808,28657,25,Female,High School,No
+58,58954,366,19182,22,Male,Bachelor,No
+45,,,25305,29,Male,Bachelor,No
+49,83003,377,24008,16,Female,Bachelor,Yes
+30,,532,28397,13,Male,Master,No
+37,81538,681,18724,22,Female,Bachelor,No
+42,41995,469,6086,14,Male,Bachelor,No
+65,74568,508,10861,29,Female,High School,No
+58,82419,687,37827,,Male,Master,No
+47,74619,710,49143,19,Female,Bachelor,No
+48,53509,673,28256,28,Male,High School,No
+41,,387,36792,21,Male,High School,No
+40,,519,38676,11,Female,High School,No
+63,60527,720,5878,25,Female,Master,No
+21,49870,781,2000,27,Female,Bachelor,No
+36,75118,457,24282,16,Male,Bachelor,Yes
+40,63845,547,2000,25,Male,Bachelor,No
+53,62487,784,21185,8,Male,Bachelor,No
+40,25361,412,4305,14,Male,PhD,No
+35,25895,803,16263,23,Male,Master,No
+24,66152,538,14483,5,Female,Bachelor,Yes
+33,59673,694,32280,24,Male,High School,No
+25,61052,569,15939,27,,Bachelor,No
+53,,547,8931,29,Male,Bachelor,Yes
+41,67052,537,25683,4,Male,Master,Yes
+31,58793,362,66541,0,,High School,No
+46,61471,805,31899,10,Male,High School,No
+44,63635,,2000,15,Male,Master,No
+43,78447,811,26278,15,Female,Bachelor,No
+48,46677,631,60995,1,Female,High School,No
+50,75301,830,27368,19,,High School,No
+29,72000,391,42929,14,Male,High School,No
+28,60319,529,40542,10,Female,Bachelor,No
+55,47548,635,41637,14,Male,Bachelor,Yes
+66,66121,590,39711,16,Male,PhD,No
+46,77007,353,28957,6,Male,Bachelor,No
+42,34350,401,22420,,Female,High School,No
+50,59367,575,21100,29,Female,Bachelor,No
+22,59424,763,26684,10,Male,High School,No
+38,43454,,30978,22,,Master,No
+37,,493,7141,1,,Bachelor,No
+40,23875,,21074,11,,Bachelor,No
+55,33731,794,24432,16,Male,PhD,Yes
+44,24176,495,26510,,Female,PhD,No
+61,44435,809,20664,9,Female,Bachelor,No
+43,45680,466,36290,7,Male,High School,No
+22,46092,638,23544,25,Female,High School,No
+52,,515,19744,8,Male,High School,No
+58,53874,709,7684,6,,High School,No
+48,,379,14116,23,Male,High School,No
+65,,376,28215,,Male,Master,No
+40,,815,26668,20,Female,Bachelor,Yes
+58,53684,438,2000,,Female,Bachelor,No
+21,53291,790,37940,23,Female,Master,No
+22,93705,683,15163,25,Female,Master,No
+58,91751,651,12373,11,,Bachelor,No
+62,90514,713,40606,7,Male,Bachelor,No
+45,,387,41287,5,,Bachelor,No
+56,31224,375,15040,21,Male,Master,No
+36,72806,391,20021,,Female,High School,Yes
+55,74743,360,7863,24,Female,Master,No
+44,68477,816,36399,22,Female,High School,No
+35,104787,573,37665,29,Male,Bachelor,No
+25,113833,412,18857,25,Female,PhD,Yes
+29,79546,507,44484,27,Female,High School,No
+63,72369,422,37860,,Female,Master,No
+41,33307,802,23268,27,Male,Bachelor,No
+67,33352,742,35102,,Female,High School,Yes
+37,,,2000,11,Female,Bachelor,No
+23,56336,500,21321,9,Male,High School,Yes
+33,28728,678,28523,17,Male,Bachelor,No
+37,55271,555,24854,,Male,Bachelor,Yes
+53,65920,461,53699,5,Female,Master,No
+55,78590,555,29347,29,Male,Master,No
+55,55631,563,30130,9,Female,Master,No
+35,52077,700,6408,8,Female,Bachelor,No
+38,58137,627,22375,11,,Master,No
+47,61806,586,14031,0,Male,Master,Yes
+49,32411,657,57883,,Female,Bachelor,Yes
+40,76333,756,19181,4,Male,High School,No
+29,106187,396,26667,24,Female,Bachelor,No
+57,75912,597,42021,23,,Master,No
+45,26140,728,34193,18,Female,Bachelor,No
+66,60079,495,5242,24,Male,High School,No
+65,19156,783,33939,4,Male,Master,Yes
+62,17757,447,34944,7,Female,Bachelor,No
+66,72504,,22457,26,Male,High School,No
+50,59708,727,31500,28,Female,Master,No
+35,42884,731,26466,8,Female,Bachelor,No
+28,12076,459,5605,7,Male,Bachelor,No
+25,30083,846,17111,3,Female,Bachelor,Yes
+65,61568,654,25290,21,Female,Bachelor,No
+33,58702,368,16790,,Male,PhD,No
+22,73173,650,32547,5,Female,Bachelor,No
+22,91515,524,39028,,Male,High School,No
+34,50536,831,28828,22,,Bachelor,No
+67,68317,,19783,8,Male,High School,Yes
+34,54968,394,44080,1,,Bachelor,No
+25,47076,788,26925,6,Female,Master,Yes
+52,52615,453,29949,,Male,Bachelor,Yes
+23,79137,513,14312,15,,Master,Yes
+43,35375,680,21953,,Female,Bachelor,No
+25,83103,514,38973,16,Male,Bachelor,No
+25,90500,,35412,19,Female,High School,No
+37,58786,597,22381,28,Male,High School,No
+21,63608,414,25115,26,Female,Bachelor,No
+60,,621,27786,20,,Master,No
+49,109932,797,11823,9,Female,Master,No
+64,79535,846,22405,11,,High School,No
+44,61790,715,17838,28,,High School,Yes
+47,59264,646,5599,9,,High School,No
+49,67921,461,27130,13,Male,Bachelor,No
+42,43673,786,22987,29,Female,PhD,No
+47,64232,397,4507,11,Female,Bachelor,No
+47,37681,705,13870,23,Female,Master,No
+62,68941,771,23781,,Female,Bachelor,No
+35,43079,582,2000,11,Female,Master,Yes
+64,77701,634,27576,1,Male,Bachelor,No
+29,55352,,28734,25,Female,Master,Yes
+29,63912,814,34085,1,Male,High School,No
+32,123140,366,16666,24,Female,Master,No
+65,75693,608,5082,25,,High School,No
+32,63892,554,33796,4,Male,Bachelor,No
+58,58977,465,5750,0,Male,High School,No
+48,35138,782,32573,28,,Bachelor,No
+51,81853,416,15540,19,Female,High School,Yes
+24,93251,518,10830,17,Male,Bachelor,No
+52,59416,558,29121,18,Male,Bachelor,No
+24,94889,463,40711,22,Female,High School,No
+46,55530,,22803,17,Female,Master,No
+57,18993,669,21560,22,Male,Bachelor,No
+64,43629,352,2000,13,Male,PhD,No
+67,34746,427,36637,0,Female,Master,No
+31,,547,26020,1,,PhD,No
+57,71794,790,21196,22,Female,PhD,Yes
+49,,551,43317,5,Female,Master,No
+55,56235,562,3056,3,Female,PhD,Yes
+59,62386,685,17935,20,Female,PhD,No
+43,41873,744,25068,4,Male,Bachelor,No
+27,37995,447,20862,26,Male,High School,No
+58,59918,685,2000,9,Male,PhD,No
+49,77192,,29891,14,Female,Bachelor,No
+27,44729,794,24573,13,Male,Master,No
+39,41469,512,39151,11,Female,PhD,No
+27,,734,53558,18,Male,Bachelor,Yes
+57,64379,,22369,25,Female,High School,Yes
+36,46054,426,30383,7,Male,Bachelor,No
+24,50649,,28543,,Male,Master,No
+34,52912,813,27377,21,Male,High School,No
+49,,,23064,17,Male,Master,Yes
+48,54094,785,30412,13,Male,Master,No
+61,45679,479,40794,29,Male,PhD,No
+37,,599,13113,10,Female,Bachelor,No
+50,46619,769,51613,12,Male,Master,No
+65,68056,394,32088,25,Female,High School,No
+36,66349,465,29242,9,Male,Master,Yes
+22,,453,2000,29,Male,PhD,No
+51,30523,549,24851,11,,Bachelor,No
+49,48199,407,11337,22,Male,High School,No
+36,72577,438,33041,17,Male,PhD,No
+47,45389,842,38378,23,Male,Bachelor,Yes
+52,43565,592,41098,26,Female,High School,No
+59,12000,757,22670,4,Female,Master,No
+27,49270,387,23956,21,Male,Master,No
+43,64875,,31120,12,Male,PhD,No
+34,67783,828,2000,10,Male,Bachelor,Yes
+36,67442,,18927,22,Male,High School,No
+22,50787,356,17401,11,Male,Bachelor,Yes
+40,53003,472,32291,4,Female,Bachelor,No
+24,76310,,18597,19,Male,Bachelor,No
+64,55014,671,35415,28,Female,High School,Yes
+47,12000,769,22300,18,Male,High School,No
+40,80440,354,36974,9,Female,High School,No
+31,34291,416,56057,3,Female,High School,No
+65,88256,361,46812,7,Male,Bachelor,No
+45,95271,648,38260,17,Female,Bachelor,No

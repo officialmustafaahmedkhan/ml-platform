@@ -1,0 +1,16 @@
+INFO:     127.0.0.1:53889 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49436 - "POST /api/auth/register HTTP/1.1" 201 Created
+INFO:     127.0.0.1:49437 - "POST /api/auth/verify-otp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49438 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49439 - "POST /api/datasets/upload HTTP/1.1" 201 Created
+INFO:     127.0.0.1:49440 - "POST /api/commands HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49441 - "POST /api/commands HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49442 - "POST /api/commands HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49443 - "POST /api/commands HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49444 - "POST /api/commands HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49445 - "POST /api/commands HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49446 - "POST /api/commands HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49447 - "POST /api/commands HTTP/1.1" 500 Internal Server Error
+INFO:     127.0.0.1:49448 - "POST /api/commands HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49449 - "POST /api/commands HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49450 - "POST /api/commands HTTP/1.1" 200 OK

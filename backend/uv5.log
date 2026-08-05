@@ -1,0 +1,144 @@
+INFO:     Started server process [12984]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     127.0.0.1:56397 - "GET /api/datasets HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64426 - "GET /api/datasets HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64428 - "GET /api/datasets/10 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64430 - "GET /api/llm/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64432 - "GET /api/llm/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63455 - "POST /api/preprocess/auto-config/10?target=Outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52724 - "POST /api/preprocess/auto-config/10?target=Outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52726 - "GET /api/recommend/10?target=Outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53951 - "GET /api/recommend/10?target=Outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53952 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59874 - "POST /api/preprocess HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59875 - "POST /api/auth/register HTTP/1.1" 201 Created
+INFO:     127.0.0.1:59876 - "POST /api/auth/verify-otp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59877 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59878 - "POST /api/datasets/upload HTTP/1.1" 201 Created
+INFO:     127.0.0.1:59879 - "POST /api/train HTTP/1.1" 200 OK
+[report] entering charts section
+INFO:     127.0.0.1:59880 - "GET /api/export/report/115/pdf HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56597 - "GET /api/train/registry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50961 - "GET /api/train/registry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50311 - "POST /api/train HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53469 - "GET /api/explain/global/116 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51213 - "GET /api/explain/global/116 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53467 - "GET /api/evaluate/116 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52511 - "GET /api/evaluate/116 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61584 - "GET /api/dashboard HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61586 - "GET /api/dashboard HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51273 - "GET /api/datasets HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51162 - "GET /api/datasets HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58036 - "GET /api/datasets/10 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52894 - "GET /api/llm/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58330 - "GET /api/llm/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61758 - "GET /api/datasets/6 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51849 - "GET /api/recommend/6?target=Outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51847 - "POST /api/preprocess/auto-config/6?target=Outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51848 - "POST /api/preprocess/auto-config/6?target=Outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59804 - "GET /api/recommend/6?target=Outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61739 - "POST /api/preprocess HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63277 - "GET /api/train/registry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55910 - "GET /api/train/registry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51670 - "POST /api/preprocess/auto-config/6?target=Outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51672 - "POST /api/preprocess/auto-config/6?target=Outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51673 - "GET /api/recommend/6?target=Outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57494 - "GET /api/recommend/6?target=Outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63084 - "GET /api/datasets HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60007 - "GET /api/datasets HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61413 - "GET /api/datasets/6 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63932 - "GET /api/llm/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58870 - "GET /api/llm/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60407 - "GET /api/datasets HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59767 - "GET /api/datasets HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64978 - "GET /api/datasets/10 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64981 - "GET /api/datasets/10/head?n=500 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64980 - "GET /api/datasets/10/eda HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52581 - "GET /api/datasets/6/eda HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58453 - "GET /api/datasets/6 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58454 - "GET /api/datasets/6/head?n=500 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59295 - "GET /api/datasets HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52351 - "GET /api/datasets HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56547 - "GET /api/experiments HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62795 - "GET /api/datasets HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63378 - "GET /api/experiments HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61160 - "GET /api/datasets HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57033 - "GET /api/datasets HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61020 - "GET /api/datasets HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55388 - "GET /api/datasets/6 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63092 - "GET /api/datasets/6/head?n=500 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63090 - "GET /api/datasets/6/eda HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63718 - "GET /api/llm/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63715 - "GET /api/datasets HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63717 - "GET /api/train/models HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50875 - "GET /api/llm/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58672 - "GET /api/datasets HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58674 - "GET /api/train/models HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49250 - "GET /api/datasets HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52599 - "GET /api/datasets HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51800 - "GET /api/datasets HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65053 - "GET /api/datasets HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55375 - "GET /api/dashboard HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54512 - "GET /api/dashboard HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57614 - "GET /api/datasets HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50195 - "GET /api/datasets HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62313 - "GET /api/datasets/6 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54736 - "GET /api/llm/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59368 - "GET /api/llm/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62845 - "GET /api/datasets/6 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61246 - "GET /api/datasets HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60748 - "GET /api/datasets HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57869 - "GET /api/datasets/6 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56995 - "GET /api/datasets/6/head?n=500 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56993 - "GET /api/datasets/6/eda HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50413 - "GET /api/llm/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50410 - "GET /api/datasets HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50412 - "GET /api/train/models HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56764 - "GET /api/llm/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59252 - "GET /api/datasets HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59254 - "GET /api/train/models HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64979 - "GET /api/datasets HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61848 - "GET /api/datasets HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59874 - "POST /api/compare HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49465 - "POST /api/compare HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63541 - "GET /api/export/model/120 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62238 - "GET /api/datasets HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56692 - "GET /api/datasets HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58428 - "GET /api/datasets HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62668 - "GET /api/datasets HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59132 - "GET /api/datasets/6 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60566 - "GET /api/llm/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57361 - "GET /api/llm/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60896 - "GET /api/datasets/6 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65017 - "GET /api/datasets HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53102 - "GET /api/datasets HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58911 - "GET /api/dashboard HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58913 - "GET /api/dashboard HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62544 - "GET /api/dashboard HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58043 - "GET /api/dashboard HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51631 - "GET /api/dashboard HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51633 - "GET /api/dashboard HTTP/1.1" 200 OK
+C:\Users\XENIUM\AppData\Local\Programs\Python\Python314\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py:359: UserWarning: resource_tracker: There appear to be 10 leaked folder objects to clean up at shutdown
+  warnings.warn(
+C:\Users\XENIUM\AppData\Local\Programs\Python\Python314\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py:375: UserWarning: resource_tracker: C:\Users\XENIUM\AppData\Local\Temp\joblib_memmapping_folder_12984_12c53aa3d273462d9fc0758492b42639_19ae669601d0482585145020f63e1364: FileNotFoundError(2, 'The system cannot find the file specified')
+  warnings.warn(f"resource_tracker: {name}: {e!r}")
+C:\Users\XENIUM\AppData\Local\Programs\Python\Python314\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py:375: UserWarning: resource_tracker: C:\Users\XENIUM\AppData\Local\Temp\joblib_memmapping_folder_12984_12c53aa3d273462d9fc0758492b42639_fcd5a8cb5737491b8aa3f35028cc6e88: FileNotFoundError(2, 'The system cannot find the file specified')
+  warnings.warn(f"resource_tracker: {name}: {e!r}")
+C:\Users\XENIUM\AppData\Local\Programs\Python\Python314\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py:375: UserWarning: resource_tracker: C:\Users\XENIUM\AppData\Local\Temp\joblib_memmapping_folder_12984_6af76ed6ff944bed80d0500a987677bc_8bacf84498b94954b5849f1b532f5943: FileNotFoundError(2, 'The system cannot find the file specified')
+  warnings.warn(f"resource_tracker: {name}: {e!r}")
+C:\Users\XENIUM\AppData\Local\Programs\Python\Python314\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py:375: UserWarning: resource_tracker: C:\Users\XENIUM\AppData\Local\Temp\joblib_memmapping_folder_12984_12c53aa3d273462d9fc0758492b42639_6f71977f472f4cff8e9536001eb45d64: FileNotFoundError(2, 'The system cannot find the file specified')
+  warnings.warn(f"resource_tracker: {name}: {e!r}")
+C:\Users\XENIUM\AppData\Local\Programs\Python\Python314\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py:375: UserWarning: resource_tracker: C:\Users\XENIUM\AppData\Local\Temp\joblib_memmapping_folder_12984_9ad4c7c255b448aebda3ecb0be3adc01_4507838a9ba748f3b1970a7658a340a5: FileNotFoundError(2, 'The system cannot find the file specified')
+  warnings.warn(f"resource_tracker: {name}: {e!r}")
+C:\Users\XENIUM\AppData\Local\Programs\Python\Python314\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py:375: UserWarning: resource_tracker: C:\Users\XENIUM\AppData\Local\Temp\joblib_memmapping_folder_12984_12c53aa3d273462d9fc0758492b42639_eb5c3aec9f3e4aeebce42a5295a9e709: FileNotFoundError(2, 'The system cannot find the file specified')
+  warnings.warn(f"resource_tracker: {name}: {e!r}")
+C:\Users\XENIUM\AppData\Local\Programs\Python\Python314\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py:375: UserWarning: resource_tracker: C:\Users\XENIUM\AppData\Local\Temp\joblib_memmapping_folder_12984_9f1251babc164aea93a23ceb3cfa0236_fcd6f388da734b619a001f8c88f9aad6: FileNotFoundError(2, 'The system cannot find the file specified')
+  warnings.warn(f"resource_tracker: {name}: {e!r}")
+C:\Users\XENIUM\AppData\Local\Programs\Python\Python314\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py:375: UserWarning: resource_tracker: C:\Users\XENIUM\AppData\Local\Temp\joblib_memmapping_folder_12984_12c53aa3d273462d9fc0758492b42639_1173ffe9a1b84208838f9c9e7ed2ffe8: FileNotFoundError(2, 'The system cannot find the file specified')
+  warnings.warn(f"resource_tracker: {name}: {e!r}")
+C:\Users\XENIUM\AppData\Local\Programs\Python\Python314\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py:375: UserWarning: resource_tracker: C:\Users\XENIUM\AppData\Local\Temp\joblib_memmapping_folder_12984_800fc381cee24393ab17e6055c2c172d_996ee15cb10c4991838df45aafd5af55: FileNotFoundError(2, 'The system cannot find the file specified')
+  warnings.warn(f"resource_tracker: {name}: {e!r}")
+C:\Users\XENIUM\AppData\Local\Programs\Python\Python314\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py:375: UserWarning: resource_tracker: C:\Users\XENIUM\AppData\Local\Temp\joblib_memmapping_folder_12984_12c53aa3d273462d9fc0758492b42639_c4ce1f34c1e84650ad90df6a4be2c5e9: FileNotFoundError(2, 'The system cannot find the file specified')
+  warnings.warn(f"resource_tracker: {name}: {e!r}")

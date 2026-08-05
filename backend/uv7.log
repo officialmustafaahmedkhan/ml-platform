@@ -1,0 +1,26 @@
+INFO:     127.0.0.1:64512 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53236 - "POST /api/auth/register HTTP/1.1" 201 Created
+INFO:     127.0.0.1:53237 - "POST /api/auth/verify-otp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53238 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53239 - "POST /api/datasets/upload HTTP/1.1" 201 Created
+INFO:     127.0.0.1:53240 - "POST /api/commands HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53241 - "POST /api/commands HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53242 - "POST /api/commands HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53243 - "POST /api/commands HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62684 - "GET /api/datasets HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62686 - "GET /api/datasets HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53244 - "POST /api/commands HTTP/1.1" 500 Internal Server Error
+INFO:     127.0.0.1:62687 - "POST /api/commands HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62688 - "POST /api/commands HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62689 - "POST /api/commands HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62690 - "POST /api/commands HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62691 - "POST /api/commands HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62695 - "POST /api/datasets/upload HTTP/1.1" 201 Created
+INFO:     127.0.0.1:62697 - "GET /api/datasets HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62699 - "GET /api/datasets/13 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60743 - "GET /api/llm/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64058 - "GET /api/llm/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61517 - "POST /api/preprocess/auto-config/13?target=Discount HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64794 - "GET /api/recommend/13?target=Discount HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64792 - "POST /api/preprocess/auto-config/13?target=Discount HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56760 - "GET /api/recommend/13?target=Discount HTTP/1.1" 200 OK
