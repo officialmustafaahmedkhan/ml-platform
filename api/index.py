@@ -19,3 +19,12 @@ if str(_BACKEND_DIR) not in sys.path:
 os.environ.setdefault("STORAGE_PROVIDER", "vercel_blob")
 
 from app.main import app  # noqa: E402  (Vercel ASGI entrypoint)
+
+# TEMP probe: report the request path FastAPI actually observes on Vercel.
+from fastapi import Request  # noqa: E402
+
+
+@app.get("/__probe__/{rest:path}")  # noqa: E402
+async def _probe(rest: str, request: Request):
+    return {"seen_path": request.url.path, "rest": rest}
+
