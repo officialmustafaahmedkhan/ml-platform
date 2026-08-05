@@ -14,9 +14,11 @@ paths stored by earlier versions of the app.
 from __future__ import annotations
 
 import io
+import os
 import pickle
 import tempfile
 import time
+import urllib.request
 import uuid
 from pathlib import Path
 
@@ -49,6 +51,15 @@ def _local_resolve(key: str | Path) -> Path:
     return DATA_DIR / path
 
 
+def _blob_url(key: str) -> str:
+    """Public URL for a blob object derived from ``BLOB_STORE_ID``."""
+    store_id = os.getenv("BLOB_STORE_ID", "").strip() or os.getenv("BLOB_STORE", "").strip()
+    sub = store_id.removeprefix("store_").lower()
+    if not sub:
+        raise RuntimeError("vercel_blob provider requires BLOB_STORE_ID")
+    return f"https://{sub}.public.blob.vercel-storage.com/{key.lstrip('/')}"
+
+
 def _blob_put(key: str, data: bytes) -> None:
     try:
         from vercel_blob import put
@@ -60,18 +71,10 @@ def _blob_put(key: str, data: bytes) -> None:
 
 
 def _blob_get(key: str) -> bytes:
-    try:
-        from vercel_blob import get
-    except ImportError as exc:  # pragma: no cover
-        raise RuntimeError(
-            "vercel_blob provider requires the 'vercel-blob' package"
-        ) from exc
-    res = get(key)
-    if hasattr(res, "content"):
-        return res.content
-    if hasattr(res, "text"):
-        return res.text.encode("utf-8")
-    raise RuntimeError(f"Unexpected response from vercel_blob.get({key!r})")
+    if not os.getenv("BLOB_STORE_ID"):
+        raise RuntimeError("vercel_blob provider requires BLOB_STORE_ID")
+    with urllib.request.urlopen(_blob_url(key), timeout=30) as resp:
+        return resp.read()
 
 
 def _blob_delete(key: str) -> None:
@@ -81,7 +84,7 @@ def _blob_delete(key: str) -> None:
         raise RuntimeError(
             "vercel_blob provider requires the 'vercel-blob' package"
         ) from exc
-    delete(key)
+    delete(_blob_url(key))
 
 
 def _write(key: str, data: bytes) -> str:
